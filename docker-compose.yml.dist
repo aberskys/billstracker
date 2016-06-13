@@ -1,0 +1,20 @@
+php:
+  build: deployment/php
+  links: [mysql]
+  volumes: [ ".:/var/www", "./app/Resources/docker/init.sh:/init.sh", "./app/session:/var/lib/php/session" ]
+
+web:
+  image: datadoglt/nginx-sf
+  volumes: ["./:/var/www"]
+  ports: ["8088:80"]
+  links: [php]
+
+mysql:
+  image: mysql
+  hostname: mysql
+  ports: ["3307:3306"]
+  environment:
+    MYSQL_DATABASE: bills_sf3
+    MYSQL_USER: billsuser
+    MYSQL_PASSWORD: S3cretpassword
+    MYSQL_ROOT_PASSWORD: mysecretpw

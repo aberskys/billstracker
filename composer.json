@@ -1,0 +1,61 @@
+{
+  "name": "bills-tracker",
+  "license": "GNU-v3",
+  "type": "project",
+  "description": "Bills tracker for home",
+
+  "autoload": {
+    "psr-0": { "": "src/" },
+    "files": [
+      "app/AppKernel.php"
+    ]
+  },
+  "require": {
+    "php": ">=7.0.0",
+    "ext-curl": "*",
+    "ext-mbstring": "*",
+    "ext-mcrypt": "*",
+    "ext-pdo": "*",
+    "ext-pdo_mysql": "*",
+    "ext-intl": "*",
+    "ext-openssl": "*",
+
+    "symfony/symfony": "~2.8.0",
+    "symfony/monolog-bundle": "~2.8",
+    "symfony/swiftmailer-bundle": "~2.3",
+    "sensio/distribution-bundle": "~5.0.0",
+    "sensio/framework-extra-bundle": "~3.0",
+    "twig/extensions": "~1.0",
+
+    "doctrine/orm": "~2.5.0",
+    "doctrine/doctrine-bundle": "~1.4",
+    "doctrine/doctrine-migrations-bundle": "~1.0",
+    "doctrine/migrations": "~1.1",
+    "doctrine/data-fixtures": "~1.0",
+    "data-dog/pager-bundle": "^0.2.0",
+    "gedmo/doctrine-extensions": "~2.4.0"
+
+  },
+
+  "require-dev": {
+    "sensio/generator-bundle": "~2.3",
+    "fzaninotto/faker": "~1.4.0",
+
+    "phpunit/phpunit": "^4.7",
+
+    "behat/behat": "~3.0.0",
+    "behat/symfony2-extension": "~2.0.0",
+    "behat/mink-extension": "~2.0.0",
+    "behat/mink-browserkit-driver": "~1.2.0",
+    "behat/mink": "~1.6.0"
+  },
+
+  "extra": {
+    "symfony-app-dir": "app",
+    "symfony-web-dir": "web",
+    "symfony-assets-install": "relative",
+    "incenteev-parameters": {
+      "file": "app/config/parameters.yml"
+    }
+  }
+}

@@ -37,25 +37,32 @@ twig:
 
 # Doctrine Configuration
 doctrine:
-    dbal:
-        driver:   pdo_mysql
-        host:     "%database_host%"
-        port:     "%database_port%"
-        dbname:   "%database_name%"
-        user:     "%database_user%"
-        password: "%database_password%"
-        charset:  UTF8
-        # if using pdo_sqlite as your database driver:
-        #   1. add the path in parameters.yml
-        #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
-        #   2. Uncomment database_path in parameters.yml.dist
-        #   3. Uncomment next line:
-        #     path:     "%database_path%"
+  dbal:
+    driver:   "%database_driver%"
+    host:     "%database_host%"
+    port:     "%database_port%"
+    dbname:   "%database_name%"
+    user:     "%database_user%"
+    password: "%database_password%"
+    charset:  UTF8
 
-    orm:
-        auto_generate_proxy_classes: "%kernel.debug%"
-        naming_strategy: doctrine.orm.naming_strategy.underscore
-        auto_mapping: true
+  orm:
+    auto_generate_proxy_classes: "%kernel.debug%"
+    naming_strategy: doctrine.orm.naming_strategy.underscore
+    auto_mapping: true
+    metadata_cache_driver: %doctrine_cache%
+    query_cache_driver: %doctrine_cache%
+    result_cache_driver: %doctrine_cache%
+    dql:
+      numeric_functions:
+        month: Oro\ORM\Query\AST\Functions\SimpleFunction
+        year: Oro\ORM\Query\AST\Functions\SimpleFunction
+
+doctrine_migrations:
+  dir_name: %kernel.root_dir%/../src/AppBundle/Migration
+  namespace: AppBundle\Migration
+  table_name: app_migrations
+  name: App migrations
 
 # Swiftmailer Configuration
 swiftmailer:

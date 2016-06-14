@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_rest(form) }}
+    <button type="submit">Save</button>
+    {{ form_end(form) }}
+    <a href="{{ path('app:settings') }}"><< Back</a>
+{% endblock %}

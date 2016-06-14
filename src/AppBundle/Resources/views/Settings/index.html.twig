@@ -1,0 +1,35 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <div>
+        <h4>Existing settings</h4>
+        <div><a href="{{ path('app:settings:new') }}">New record</a> </div>
+        <div>
+            {% if settings %}
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Created at</th>
+                        <th>Updated at</th>
+                        <th>&nbsp;</th>
+                    </thead>
+                    <tbody>
+                    {% for setting in settings %}
+                        <tr>
+                            <td>{{ setting.id }}</td>
+                            <td>{{ setting.name }}</td>
+                            <td>{{ date(setting.createdAt).format('Y-m-d H:i:s') }}</td>
+                            <td>{{ date(setting.updateAt).format('Y-m-d H:i:s') }}</td>
+                            <td><a href="{{ path('app:settings:edit', {id: setting.id}) }}">Edit</a> |
+                                <a href="{{ path('app:settings:delete', {id: setting.id}) }}">Delete</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                NO SETTINGS
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

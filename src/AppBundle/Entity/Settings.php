@@ -63,7 +63,7 @@ class Settings
     }
 
     /**
-     * @return DateTime
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -71,7 +71,7 @@ class Settings
     }
 
     /**
-     * @return DateTime
+     * @return \DateTime
      */
     public function getUpdateAt()
     {

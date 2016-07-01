@@ -1,4 +1,5 @@
-<?php namespace AppBundle\Controller;
+<?php
+namespace AppBundle\Controller;
 
 use AppBundle\Controller\Traits\Doctrine;
 use AppBundle\Entity\Settings;
@@ -6,6 +7,7 @@ use AppBundle\Form\SettingsType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\TemplateController;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -16,32 +18,20 @@ use Symfony\Component\HttpFoundation\Request;
 class SettingsController extends Controller
 {
     use Doctrine;
+
     /**
-     * @Route(path="", name="app:settings")
-     * @Template
+     * @Route("", name="settings:index");
+     * @Template("AppBundle:Settings:settingsIndex.html.twig");
      * @return array
      */
     public function indexAction()
     {
-        // If you'll need some data from database or you will have an urge to write data to DB, use Doctrine trait in
-        // controller (Read: http://php.net/manual/en/language.oop5.traits.php)
-        // Main functions are: persist(), flush(), remove().
-        // Persist - creates object out of given data before saving it to the database
-        // Remove - removes entry from DB.
-        // Flush - flushes data changes to DB (note, that this can be done only once in an action). Flush() must always
-        // be done after persist() or remove() method.
-        $settings = $this->repo(Settings::class)->findAll();
-        return [
-            'settings' => $settings
-        ];
+        return [];
     }
-
     /**
      * New settings creation action. Creates Form, validates it & saves data
      *
      * @Route(path="/new", name="app:settings:new")
-     * @Template
-     *
      * @param Request $request
      * @return array
      */
@@ -110,3 +100,4 @@ class SettingsController extends Controller
         return $this->redirectToRoute('app:settings');
     }
 }
+

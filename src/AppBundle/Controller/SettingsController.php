@@ -16,9 +16,9 @@ use Symfony\Component\HttpFoundation\Request;
 class SettingsController extends Controller
 {
     use Doctrine;
+
     /**
-     * @Route(path="", name="app:settings")
-     * @Template
+     * @Route("/settings")
      * @return array
      */
     public function indexAction()
@@ -30,10 +30,13 @@ class SettingsController extends Controller
         // Remove - removes entry from DB.
         // Flush - flushes data changes to DB (note, that this can be done only once in an action). Flush() must always
         // be done after persist() or remove() method.
+        dump('Settings page'); die();
         $settings = $this->repo(Settings::class)->findAll();
         return [
             'settings' => $settings
         ];
+
+        dump('Settings page'); die();
     }
 
     /**
@@ -109,4 +112,12 @@ class SettingsController extends Controller
 
         return $this->redirectToRoute('app:settings');
     }
+
+    public function output()
+    {
+        echo 'SETTINGS';
+    }
+
+    
 }
+

@@ -1,4 +1,5 @@
-<?php namespace AppBundle\Controller;
+<?php
+namespace AppBundle\Controller;
 
 use AppBundle\Controller\Traits\Doctrine;
 use AppBundle\Entity\Settings;
@@ -20,11 +21,12 @@ class SettingsController extends Controller
 
     /**
      * @Route("", name="settings:index");
+     * @Template("AppBundle:Settings:settingsIndex.html.twig");
      * @return array
      */
     public function indexAction()
     {
-        return $this->render('index.html.twig');
+        return array();
     }
     /**
      * New settings creation action. Creates Form, validates it & saves data
@@ -98,14 +100,6 @@ class SettingsController extends Controller
         $this->flush();
 
         return $this->redirectToRoute('app:settings');
-    }
-
-    /**
-     * @Route(path="/test", name="app:settings:test")
-     */
-    public function testAction()
-    {
-        @Template("AppBundle:Settings:index.html.twig");
     }
 }
 

@@ -12,11 +12,12 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/index", name="homepage")
-     * @Template("AppBundle:Settings:index.html.twig");
+     * @Route("", name="homepage")
+     * @Template("AppBundle:Index:index.html.twig");
+     * @return array
      */
     public function indexAction()
     {
-        return array();
+        return [];
     }
 }

@@ -26,14 +26,12 @@ class SettingsController extends Controller
      */
     public function indexAction()
     {
-        return array();
+        return [];
     }
     /**
      * New settings creation action. Creates Form, validates it & saves data
      *
      * @Route(path="/new", name="app:settings:new")
-     * @Template
-     *
      * @param Request $request
      * @return array
      */

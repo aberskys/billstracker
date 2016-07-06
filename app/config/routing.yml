@@ -1,3 +1,9 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+index:
+    path: "/"
+
+settings:
+    path: "/settings"

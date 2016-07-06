@@ -1,16 +1,17 @@
 {% extends "::base.html.twig" %}
 
 {% block body %}
-        <link rel="stylesheet" href="{{ asset('build/css/bootstrap.css') }}" />
+    <head>
+        <link rel="stylesheet" href="{{ asset('build/css/bootstrap.min.css') }}" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+    </head>
     <div class="container">
         <h2>Welcome to the bills tracker website!</h2>
-        <img src="http://manvsdebt.com/wp-content/uploads/2012/05/bills-to-pay.jpg" class="img-circle" alt="Cinque Terre" width="320" height="250">
+        <img src="/build/img/bills.jpg" class="img-circle" alt="Cinque Terre" width="320" height="250">
     </div>
     <div class="container-fluid">
-        <h3>Try to go to the settings menu. Click <a href="/settings">HERE!</a></h3>
+        <h3>Try to go to the settings menu. Click <a href="{{ path('settings') }}">HERE!</a></h3>
     </div>
 
 {% endblock %}

@@ -1,0 +1,24 @@
+.container
+{
+    border-style: solid;
+}
+.header
+{
+    display: block;
+    text-align: center;
+}
+.row
+{
+    display: block;
+}
+li {
+    float: left;
+    padding: 8px;
+    display: block;
+    background-color: darkblue;
+    width: 240px;
+    margin-left: 5px;
+    margin-top: 8px;
+    left: 10px;
+}
+

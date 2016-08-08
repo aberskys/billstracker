@@ -1,17 +1,20 @@
 .container
 {
     border-style: solid;
+    width: 1024px;
+    height: 720px;
 }
-.header
+.col-md-12
 {
-    display: block;
+    padding: 2px;
+    max-width: 100%;
     text-align: center;
 }
-.row
-{
-    display: block;
+.header .navigation > .nav ul { /* suteikia auksti ul elementui */
+    overflow: hidden;
+    padding: 0;
 }
-li {
+.header .navigation > .nav ul > li { /* Visada stenkis patikslint kokiems li (ar kitiems) elementams aprasai stiliu */
     float: left;
     padding: 8px;
     display: block;
@@ -19,6 +22,21 @@ li {
     width: 240px;
     margin-left: 5px;
     margin-top: 8px;
-    left: 10px;
+}
+.header .navigation > .nav ul > li:first-child {
+    margin-left: 0;
+}
+.header .header-logo {
+    display: block;
+    max-width: 975px; /* Max-width nustato maksimalu leidziama ploti */
+    width: 100%; /* Bet tikrasis plotis neturetu buti nurodomas px isskyrus kelis atvejus */
+    margin: 0 auto; /* IMG Centravimas horizontaliai */
+}
+
+.header .navigation > .nav {
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float:none;
 }
 

@@ -5,9 +5,37 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('build/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('build/css/styles.css') }}" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block basebody %}
+            <div class="row header">
+                <div class="col-md-12">
+                    <img class="header-logo" src="/build/img/header1.jpg">
+                </div>
+                <div class="col-md-12 navigation">
+                    <nav class="nav">
+                        <ul>
+                            <li>
+                                <a href="{{ path('index') }}">Home</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('settings') }}">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

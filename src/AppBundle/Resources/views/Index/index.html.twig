@@ -1,41 +1,21 @@
 {% extends "::base.html.twig" %}
 
 {% block body %}
-    <head>
         <link rel="stylesheet" href="{{ asset('build/css/bootstrap.min.css') }}" />
         <link rel="stylesheet" href="{{ asset('build/css/styles.css') }}" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    </head>
-    <div class="container">
-        <div class="header">
-            <img src="/build/img/header1.jpg">
-        </div>
-        <div class="row">
-            <nav id="menu-navigation" class="nav col-xs-12">
-                <ul>
-                    <li>
-                        <a href="{{ path('index') }}">Home</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('settings') }}">Settings</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Contacts</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="main">
-            <div class="container-fluid">
-                <h3>Try to go to the settings menu. Click <a href="{{ path('settings') }}">HERE!</a></h3>
+        <basebody>
+            <div class="container">
+                <div class="main">
+                    <div class="container-fluid">
+                        <h3>Index PAGE</h3>
+                    </div>
+                </div>
+                <img src="/build/img/bills.jpg" class="img-circle" alt="Cinque Terre" width="320" height="250">
             </div>
-        </div>
-        <img src="/build/img/bills.jpg" class="img-circle" alt="Cinque Terre" width="320" height="250">
-    </div>
+        </basebody>
+
 
 
 {% endblock %}

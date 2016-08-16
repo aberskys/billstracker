@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Bills tracker{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" href="{{ asset('build/css/bootstrap.min.css') }}" />
@@ -11,7 +11,7 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </head>
     <body>
-        {% block basebody %}
+    {% block bodyy %}
             <div class="row header">
                 <div class="col-md-12">
                     <img class="header-logo" src="/build/img/header1.jpg">
@@ -35,7 +35,7 @@
                     </nav>
                 </div>
             </div>
-        {% endblock %}
+    {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

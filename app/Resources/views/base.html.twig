@@ -12,30 +12,7 @@
     </head>
     <body>
     <div class="container">
-        <div class="row header">
-            <div class="col-md-12">
-                <img class="header-logo" src="/build/img/header1.jpg">
-            </div>
-            <div class="col-md-12 navigation">
-                <nav class="nav">
-                    <ul>
-                        <li>
-                            <a href="{{ path('homepage') }}">Home</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('settings:index') }}">Settings</a>
-                        </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Contacts</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-            <div class="main">{% block mainmenu %}{% endblock %}</div>
+        <div class="content">{% block content %}{% endblock %}</div>
     </div>
     {% block javascripts %}{% endblock %}
     </body>

@@ -12,7 +12,8 @@
     </head>
     <body>
     <div class="container">
-        <div class="content">{% block content %}{% endblock %}</div>
+        {% include "::header.html.twig" %}
+            <div class="content">{% block content %}{% endblock %}</div>
     </div>
     {% block javascripts %}{% endblock %}
     </body>

@@ -13,14 +13,14 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Class SettingsController
  * @package AppBundle\Controller
- * @Route(path="/settings")
+ * @Route(path="/settings", name="settings")
  */
 class SettingsController extends Controller
 {
     use Doctrine;
 
     /**
-     * @Route(path="/settings", name="settings:index")
+     * @Route(path="", name="settings:index")
      * @Template("AppBundle:Settings:settingsIndex.html.twig")
      * @return array
      */

@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Class DefaultController
  * @package AppBundle\Controller
- * @Route(path="")
+ * @Route(path="", name="homepage")
  */
 class DefaultController extends Controller
 {

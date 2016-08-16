@@ -1,7 +1,8 @@
 .container
 {
     border-style: solid;
-    width: 1024px;
+    border-width: 0.5px;
+    width: 990px;
     height: 720px;
 }
 .col-md-12

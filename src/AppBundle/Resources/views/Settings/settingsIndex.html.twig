@@ -1,7 +1,7 @@
 {% extends "::base.html.twig" %}
 
 {% block body %}
-    <div class="container">
+    {% block mainmenu %}
         <div class="main">
             <div class="panel-group">
                 <div class="panel panel-default">
@@ -20,6 +20,5 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    {% endblock %}
 {% endblock %}

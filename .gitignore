@@ -13,3 +13,4 @@ app/session/
 /vendor/
 /web/bundles/
 docker-compose.yml
+!web/build/img

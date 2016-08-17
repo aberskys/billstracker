@@ -1,0 +1,43 @@
+.container
+{
+    border-style: solid;
+    border-width: 0.5px;
+    width: 1024px;
+    height: 720px;
+}
+.col-md-12
+{
+    padding: 2px;
+    max-width: 100%;
+    text-align: center;
+}
+.header .navigation > .nav ul { /* suteikia auksti ul elementui */
+    overflow: hidden;
+    padding: 0;
+}
+.header .navigation > .nav ul > li {
+    float: left;
+    padding: 8px;
+    display: block;
+    background-color: darkblue;
+    width: 240px;
+    margin-left: 5px;
+    margin-top: 8px;
+}
+.header .navigation > .nav ul > li:first-child {
+    margin-left: 0;
+}
+.header .header-logo {
+    display: block;
+    max-width: 975px; /*maksimalus leidziama plotis */
+    width: 100%;
+    margin: 0 auto; /* IMG Centravimas horizontaliai */
+}
+
+.header .navigation > .nav {
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float:none;
+}
+

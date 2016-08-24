@@ -4,12 +4,17 @@
         </div>
         <div class="col-md-12 navigation">
             <nav class="nav">
-                <ul>
+                <ul class="dropdown">
                     <li>
                         <a href="{{ path('homepage') }}">Home</a>
                     </li>
                     <li>
-                        <a href="{{ path('settings:index') }}">Settings</a>
+                        <ul class="dropdown-menu">
+                        <a href="#">Settings</a>
+                            <li>
+                                <a href="{{ path('settings:index') }}">Bill types</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#">About</a>

@@ -11,20 +11,29 @@
     max-width: 100%;
     text-align: center;
 }
-.header .navigation > .nav ul { /* suteikia auksti ul elementui */
-    overflow: hidden;
+
+.header .navigation > .navibar {
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float: none;
+}
+
+.header .navigation > .navibar ul { /* suteikia auksti ul elementui */
+    /*overflow: hidden;*/
     padding: 0;
 }
-.header .navigation > .nav ul > li {
+
+.header .navigation > .navibar ul > li {
     float: left;
-    padding: 8px;
     display: block;
     background-color: darkblue;
     width: 240px;
     margin-left: 5px;
     margin-top: 8px;
 }
-.header .navigation > .nav ul > li:first-child {
+
+.header .navigation > .navibar ul > li:first-child {
     margin-left: 0;
 }
 .header .header-logo {
@@ -32,13 +41,6 @@
     max-width: 975px; /*maksimalus leidziama plotis */
     width: 100%;
     margin: 0 auto; /* IMG Centravimas horizontaliai */
-}
-
-.header .navigation > .nav {
-    margin: 0 auto;
-    display: table;
-    table-layout: fixed;
-    float:none;
 }
 
 .main {
@@ -52,38 +54,7 @@
     padding: 9px 0;
 }
 
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
+.dropdown:hover .dropdown-menu {
     display: block;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-    display: block;
+    margin-top: 0;
 }

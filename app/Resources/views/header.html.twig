@@ -1,21 +1,19 @@
  <div class="row header">
         <div class="col-md-12">
-            <a href="{{ path('homepage') }}"><img class="header-logo" src="/build/img/header1.jpg"></a>
+            <img class="header-logo" src="/build/img/header1.jpg">
         </div>
         <div class="col-md-12 navigation">
-            <nav class="nav">
-                <ul class="dropdown">
+            <nav class="navibar">
+                <ul class="dropdown nav">
                     <li>
                         <a href="{{ path('homepage') }}">Home</a>
                     </li>
                     <li>
+                        <a href="#">Settings</a>
                         <ul class="dropdown-menu">
-                            <button class="dropbtn">Left</button>
-                            <ul class="dropdown-content">
                             <li>
                                 <a href="{{ path('settings:index') }}">Bill types</a>
                             </li>
-                            </ul>
                         </ul>
                     </li>
                     <li>

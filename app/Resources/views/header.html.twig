@@ -1,6 +1,6 @@
  <div class="row header">
         <div class="col-md-12">
-            <img class="header-logo" src="/build/img/header1.jpg">
+            <a href="{{ path('homepage') }}"><img class="header-logo" src="/build/img/header1.jpg"></a>
         </div>
         <div class="col-md-12 navigation">
             <nav class="nav">
@@ -10,10 +10,12 @@
                     </li>
                     <li>
                         <ul class="dropdown-menu">
-                        <a href="#">Settings</a>
+                            <button class="dropbtn">Left</button>
+                            <ul class="dropdown-content">
                             <li>
                                 <a href="{{ path('settings:index') }}">Bill types</a>
                             </li>
+                            </ul>
                         </ul>
                     </li>
                     <li>
